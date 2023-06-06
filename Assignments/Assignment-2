@@ -1,0 +1,14 @@
+What is NPM - npm is used to manage the packages, it's a repo which had dependecies and we can get these dependencies installed when needed using npm i 
+Parcel/Webpack- It does the things like 
+.parcel-cache - This is the cache file created. Parcel creates the cache once we save the code, this will help us to build in less time 
+npx- this is used to execute the package , when this is run the package is executed in our code
+Diff b/w dev and normal dependencies- Dev dependencies are those packages which are required for dev env for example parcel is needed in dev as we want the bundling, compressing etc on the other hand normal dependencies are those which are required in all the env for our code to run eg react package
+Tree Shaking - This is a feature where parcel removes our unused code while bundling and compressing our files in prod build 
+HMR- This is hot modules replacement , this is a feature which parcel provides us that is it reloads our page automatically when there is any change in our code , it does this with the help of File Watching Algorithm which is written in C++ this monitors all of our files and if there is any change it will reload the page automatically.
+5 superpowers - HMR, Bundling, Compressing, Differential Bundling, Tree shaking, minifying, server port , https rendering 
+Difference between package.json & package-lock.json- package.json stores the version of the package approx whereas the lock.json stores the exact version of the package 
+Why Should we not modify package-lock.json - We should not do this because we are maintaining the exact version of the package and also we have some SHS keys which help us have same version on prod as well so we should not change this file
+Why we should not push node modules to git - This is because , we can re generate these dependencies in local so pushing these to git will take up the time and space but of not much use so we should not push the node modules to git, we can do this by adding /node_modules in .gitignore file. 
+dist folder - This is the compressed and bundled files stored which are used for re building the app , with dist and parcel-cache file we are building the app in less time
+^caret and ~tilde - these are used in front of the version in package.json file , ^ install for minor version upgrades eg from 2.9.2 to 2.9.3 Whereas ~ inidcates install the major upgrades as well Eg 2.9.1 to 3.4.2 etc . If we don't give any of these in front of version then the package version is fixed we are installing or upgrading it further.
+Script types -  https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement
